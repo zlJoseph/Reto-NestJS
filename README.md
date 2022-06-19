@@ -35,5 +35,5 @@ npm run start
 ```json
 [1,1,2,3,4,4,5,6]
 ```
-
+Nota: Valido solo para número enteros positivos
 3. Para obtener el historial de operaciones: [http://localhost:3000/history](http://localhost:3000/history)
