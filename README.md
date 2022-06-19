@@ -1,26 +1,39 @@
-### Sequelize sample
+# Reto-NestJS
 
-### Installation
+Reto con NestJS
 
-`npm install`
+## Instalación
 
-### Running
+Requerimientos
 
-This example requires docker or a local MySQL installation.  If using a local MySQL database, see `app.module.ts` for credentials, and make sure there are matching credentials in the database and the source code.
+ - npm
+ - node 
+ - xampp
 
-#### Docker
+1) Clonar e instalar las dependencias del proyecto
+```bash
+git clone https://github.com/zlJoseph/Reto-NestJS.git
+cd Reto-NestJS
+npm install
+```
+2) Necesario ejecutar mysql en xampp y crear la base de datos **prueba2**.
 
-There is a `docker-compose.yml` file for starting Docker.
+3) Ejecutar
+```bash
+npm run start
+```
 
-`docker-compose up`
+4) El servidor escucha el puerto 3000: [http://localhost:3000/](http://localhost:3000/)
 
-After running the sample, you can stop the Docker container with
+## Api response
+1. Para obtener la lista enlazada intercambiado en cada dos nodos adyacentes: [http://localhost:3000/operaciones/listaEnlazada/[4,3,5,7,8,3]](http://localhost:3000/operaciones/listaEnlazada/[4,3,5,7,8,3])
+```json
+3->4->7->5->3->8
+```
 
-`docker-compose down`
+2. Para ordenar de forma ascendente una matriz de k listas vinculadas: [http://localhost:3000/operaciones/listaVinculada/[[1,4,5],[1,3,4],[2,6]]](http://localhost:3000/operaciones/listaVinculada/[[1,4,5],[1,3,4],[2,6]])
+```json
+[1,1,2,3,4,4,5,6]
+```
 
-### Run the sample
-
-Then, run Nest as usual:
-
-`npm run start`
-
+3. Para obtener el historial de operaciones: [http://localhost:3000/history](http://localhost:3000/history)
